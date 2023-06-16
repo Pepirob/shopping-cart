@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useId, useContext } from "react";
+import { useId } from "react";
 import "./Filters.css";
-import { FiltersContext } from "../context/filters";
+import { useFilters } from "../hooks/useFilters";
 
 function Filters() {
-  const { filters, setFilters } = useContext(FiltersContext);
+  const { filters, setFilters } = useFilters();
 
   const minPriceFilteredId = useId();
   const CategoryFilteredId = useId();

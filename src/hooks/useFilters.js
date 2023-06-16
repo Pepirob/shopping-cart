@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FiltersContext } from "../context/filters";
 
 export function useFilters() {
-  const { filters } = useContext(FiltersContext);
+  const { filters, setFilters } = useContext(FiltersContext);
 
   const filterProducts = (products) => {
     return products.filter((product) => {
@@ -13,5 +13,5 @@ export function useFilters() {
     });
   };
 
-  return { filters, filterProducts };
+  return { filters, filterProducts, setFilters };
 }
